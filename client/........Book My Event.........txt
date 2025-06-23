@@ -1,0 +1,38 @@
+........Book My Event........
+
+Event Attendee
+Auth---- Name, email, password, phone number...,
+
+
+Event Creator
+
+Auth---- Name, email, password, phone number, company name, country,...,
+How would you like to receive your money from events: eg: weekly, monthly...?
+Bank Details...,
+
+
+
+
+
+### 🎨 Primary Color: `#4F46E5` (Indigo-600)
+
+* **Name**: Indigo
+* **HEX**: `#4F46E5`
+* **Usage**: Great as a **primary theme color** – bold, modern, and elegant.
+
+### Supporting Palette:
+
+* **Accent**: `#FBBF24` (Amber-400) – good for buttons or highlights
+* **Background**: `#F9FAFB` (Gray-50) – light and clean
+* **Text**: `#111827` (Gray-900) – dark for readability
+* **Secondary Background**: `#E0E7FF` (Indigo-100) – subtle highlight areas
+
+
+<Hero />
+      <Why Choose Book My Event />
+      <Features />
+      <MarqueeSection />
+      <HowItWorks />
+      <Testimonials />
+      <CallToAction />
+      <Footer />

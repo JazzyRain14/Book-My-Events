@@ -1,0 +1,20 @@
+// tsconfig.json
+{
+    "compilerOptions": {
+      "target": "es2022",                // Specify ECMAScript target version
+      "module": "commonjs",             // Specify module code generation (Node.js uses CommonJS by default)
+      "lib": ["es2022"],                // Specify library files to be included in the compilation
+      "outDir": "./dist",               // Redirect output structure to the directory
+      "rootDir": "./",                  // Specify the root directory of input files
+      "strict": true,                   // Enable all strict type-checking options
+      "esModuleInterop": true,          // Enables 'allowSyntheticDefaultImports' for type compatibility
+      "skipLibCheck": true,             // Skip type checking of all declaration files
+      "forceConsistentCasingInFileNames": true // Ensure that casing is correct in imports
+    },
+    "include": [
+      "**/*.ts"                          // Include all .ts files in the project
+    ],
+    "exclude": [
+      "node_modules"                    // Exclude node_modules folder
+    ]
+  }
