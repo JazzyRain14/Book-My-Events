@@ -1,16 +1,15 @@
 import 'dotenv/config';
-import express, { Response, Request } from 'express';
+import express from 'express';
 import mongoose from 'mongoose';
 import cors from "cors"
 
-import { count } from 'console';
 import { authRouter } from './routes/authRouth';
 
 const app = express();
-const port = process.env.PORT
 app.use(express.json());
 app.use(cors())
 app.use(express.urlencoded({extended:true}))
+const port = process.env.PORT
 const DB_URI = process.env.MONGO_URI;
 
 if (!DB_URI) {
