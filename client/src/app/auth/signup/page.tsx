@@ -17,10 +17,10 @@ export default function SignUp() {
   const [userName, setUserName] = useState("")
   const [userEmail, setUserEmail] = useState("")
   const [userPassword, setUserPassword] = useState("")
-  const [isUser, setIsUser] = useState("attendee")
+  const [role, setRole] = useState("attendee")
 
   const handleRoleChange = (valueString: string) => {
-    setIsUser(valueString);
+    setRole(valueString);
     console.log("Selected Role (string):", valueString);
     // If you needed a boolean from this, you'd convert here:
     // const isCreator = valueString === 'creator';
@@ -34,7 +34,7 @@ export default function SignUp() {
       userName,
       userEmail,
       userPassword,
-      isUser
+      role
     }
       
     const userdb = "http://localhost:5000/auth/signup/"
@@ -81,7 +81,7 @@ export default function SignUp() {
 
             <RadioGroup
               defaultValue="option-one"
-              value={isUser}
+              value={role}
               onValueChange={handleRoleChange}
             >
               <Label htmlFor="option-one">Are you either a ?</Label>

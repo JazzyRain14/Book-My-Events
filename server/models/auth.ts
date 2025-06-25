@@ -4,7 +4,7 @@ interface userCredentials extends Document {
     userName: string;
     userEmail: string;
     userPassword: string;
-    isUser: string;
+    role: string;
     createdAt: Date;
 }
 
@@ -18,15 +18,18 @@ const UserSchema: Schema = new Schema<userCredentials>({
     userEmail: {
         type: String,
         required: [true, 'Your genuine email please'],
+        unique:true,
         trim: true,
     },
     userPassword: {
         type: String,
         required: [true, 'You need to input password'],
+        minlength:15
     },
-    isUser: {
+    role: {
         type: String,
-        default: "attendee"
+        enum: ['creator', 'attendee'],
+        default: 'attendee'
     },
     createdAt: {
         type: Date,
